@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Cinemachine;
+
 
 public class ShootingSystem : MonoBehaviour
 {
@@ -12,13 +12,13 @@ public class ShootingSystem : MonoBehaviour
     [SerializeField] ParticleSystem inkParticle;
     [SerializeField] Transform parentController;
     [SerializeField] Transform splatGunNozzle;
-    [SerializeField] CinemachineFreeLook freeLookCamera;
-    CinemachineImpulseSource impulseSource;
+    [SerializeField] Unity.Cinemachine.CinemachineFreeLook freeLookCamera;
+    Unity.Cinemachine.CinemachineImpulseSource impulseSource;
 
     void Start()
     {
         input = GetComponent<MovementInput>();
-        impulseSource = freeLookCamera.GetComponent<CinemachineImpulseSource>();
+        impulseSource = freeLookCamera.GetComponent<Unity.Cinemachine.CinemachineImpulseSource>();
     }
 
     void Update()
